@@ -1,0 +1,577 @@
+[gd_scene format=3 uid="uid://c2mw304mf5lo1"]
+
+[ext_resource type="Script" uid="uid://clrvhgynklhd0" path="res://Codigos/main.gd" id="1_sihr0"]
+[ext_resource type="PackedScene" uid="uid://b68x00bi2dw1w" path="res://Cenas/Mapa/_Mapa.tscn" id="2_xfq55"]
+[ext_resource type="Script" uid="uid://dvkk2fccqv20s" path="res://Codigos/run.gd" id="3_koup1"]
+[ext_resource type="PackedScene" uid="uid://chof85pm00sfe" path="res://Cenas/Run/Player.tscn" id="4_26jie"]
+[ext_resource type="Script" uid="uid://qdjap6lpi5pm" path="res://Codigos/score_manager.gd" id="5_nll35"]
+[ext_resource type="Script" uid="uid://sgmgyrcdt2gk" path="res://Codigos/run_manager.gd" id="6_k1jei"]
+[ext_resource type="Script" uid="uid://deklenpm8g4ri" path="res://Codigos/Cenario.gd" id="7_x0njg"]
+[ext_resource type="Texture2D" uid="uid://c0vhd3ynlafa5" path="res://Artes/Runner Tamplate/SkyPrancheta.png" id="8_ay0dw"]
+[ext_resource type="Texture2D" uid="uid://w23q7erelx28" path="res://Artes/Runner Tamplate/Ground.png" id="9_c7677"]
+[ext_resource type="Script" uid="uid://df3o5bqe3yxmn" path="res://Cenas/loja.gd" id="10_xfq55"]
+[ext_resource type="Script" uid="uid://elq3w58j6pkg" path="res://Cenas/cura.gd" id="11_koup1"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_oxeok"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_hvey0"]
+distance = -5.0000153
+
+[sub_resource type="FontFile" id="FontFile_dapfe"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/19/0/ascent = 0.0
+cache/0/19/0/descent = 0.0
+cache/0/19/0/underline_position = 0.0
+cache/0/19/0/underline_thickness = 0.0
+cache/0/19/0/scale = 1.0
+cache/0/22/0/ascent = 0.0
+cache/0/22/0/descent = 0.0
+cache/0/22/0/underline_position = 0.0
+cache/0/22/0/underline_thickness = 0.0
+cache/0/22/0/scale = 1.0
+cache/0/24/0/ascent = 0.0
+cache/0/24/0/descent = 0.0
+cache/0/24/0/underline_position = 0.0
+cache/0/24/0/underline_thickness = 0.0
+cache/0/24/0/scale = 1.0
+cache/0/27/0/ascent = 0.0
+cache/0/27/0/descent = 0.0
+cache/0/27/0/underline_position = 0.0
+cache/0/27/0/underline_thickness = 0.0
+cache/0/27/0/scale = 1.0
+cache/0/29/0/ascent = 0.0
+cache/0/29/0/descent = 0.0
+cache/0/29/0/underline_position = 0.0
+cache/0/29/0/underline_thickness = 0.0
+cache/0/29/0/scale = 1.0
+cache/0/34/0/ascent = 0.0
+cache/0/34/0/descent = 0.0
+cache/0/34/0/underline_position = 0.0
+cache/0/34/0/underline_thickness = 0.0
+cache/0/34/0/scale = 1.0
+cache/0/42/0/ascent = 0.0
+cache/0/42/0/descent = 0.0
+cache/0/42/0/underline_position = 0.0
+cache/0/42/0/underline_thickness = 0.0
+cache/0/42/0/scale = 1.0
+cache/0/47/0/ascent = 0.0
+cache/0/47/0/descent = 0.0
+cache/0/47/0/underline_position = 0.0
+cache/0/47/0/underline_thickness = 0.0
+cache/0/47/0/scale = 1.0
+cache/0/53/0/ascent = 0.0
+cache/0/53/0/descent = 0.0
+cache/0/53/0/underline_position = 0.0
+cache/0/53/0/underline_thickness = 0.0
+cache/0/53/0/scale = 1.0
+cache/0/56/0/ascent = 0.0
+cache/0/56/0/descent = 0.0
+cache/0/56/0/underline_position = 0.0
+cache/0/56/0/underline_thickness = 0.0
+cache/0/56/0/scale = 1.0
+cache/0/59/0/ascent = 0.0
+cache/0/59/0/descent = 0.0
+cache/0/59/0/underline_position = 0.0
+cache/0/59/0/underline_thickness = 0.0
+cache/0/59/0/scale = 1.0
+cache/0/61/0/ascent = 0.0
+cache/0/61/0/descent = 0.0
+cache/0/61/0/underline_position = 0.0
+cache/0/61/0/underline_thickness = 0.0
+cache/0/61/0/scale = 1.0
+cache/0/65/0/ascent = 0.0
+cache/0/65/0/descent = 0.0
+cache/0/65/0/underline_position = 0.0
+cache/0/65/0/underline_thickness = 0.0
+cache/0/65/0/scale = 1.0
+cache/0/67/0/ascent = 0.0
+cache/0/67/0/descent = 0.0
+cache/0/67/0/underline_position = 0.0
+cache/0/67/0/underline_thickness = 0.0
+cache/0/67/0/scale = 1.0
+cache/0/68/0/ascent = 0.0
+cache/0/68/0/descent = 0.0
+cache/0/68/0/underline_position = 0.0
+cache/0/68/0/underline_thickness = 0.0
+cache/0/68/0/scale = 1.0
+cache/0/69/0/ascent = 0.0
+cache/0/69/0/descent = 0.0
+cache/0/69/0/underline_position = 0.0
+cache/0/69/0/underline_thickness = 0.0
+cache/0/69/0/scale = 1.0
+cache/0/70/0/ascent = 0.0
+cache/0/70/0/descent = 0.0
+cache/0/70/0/underline_position = 0.0
+cache/0/70/0/underline_thickness = 0.0
+cache/0/70/0/scale = 1.0
+cache/0/71/0/ascent = 0.0
+cache/0/71/0/descent = 0.0
+cache/0/71/0/underline_position = 0.0
+cache/0/71/0/underline_thickness = 0.0
+cache/0/71/0/scale = 1.0
+cache/0/72/0/ascent = 0.0
+cache/0/72/0/descent = 0.0
+cache/0/72/0/underline_position = 0.0
+cache/0/72/0/underline_thickness = 0.0
+cache/0/72/0/scale = 1.0
+cache/0/74/0/ascent = 0.0
+cache/0/74/0/descent = 0.0
+cache/0/74/0/underline_position = 0.0
+cache/0/74/0/underline_thickness = 0.0
+cache/0/74/0/scale = 1.0
+cache/0/76/0/ascent = 0.0
+cache/0/76/0/descent = 0.0
+cache/0/76/0/underline_position = 0.0
+cache/0/76/0/underline_thickness = 0.0
+cache/0/76/0/scale = 1.0
+cache/0/79/0/ascent = 0.0
+cache/0/79/0/descent = 0.0
+cache/0/79/0/underline_position = 0.0
+cache/0/79/0/underline_thickness = 0.0
+cache/0/79/0/scale = 1.0
+cache/0/82/0/ascent = 0.0
+cache/0/82/0/descent = 0.0
+cache/0/82/0/underline_position = 0.0
+cache/0/82/0/underline_thickness = 0.0
+cache/0/82/0/scale = 1.0
+cache/0/86/0/ascent = 0.0
+cache/0/86/0/descent = 0.0
+cache/0/86/0/underline_position = 0.0
+cache/0/86/0/underline_thickness = 0.0
+cache/0/86/0/scale = 1.0
+cache/0/88/0/ascent = 0.0
+cache/0/88/0/descent = 0.0
+cache/0/88/0/underline_position = 0.0
+cache/0/88/0/underline_thickness = 0.0
+cache/0/88/0/scale = 1.0
+cache/0/89/0/ascent = 0.0
+cache/0/89/0/descent = 0.0
+cache/0/89/0/underline_position = 0.0
+cache/0/89/0/underline_thickness = 0.0
+cache/0/89/0/scale = 1.0
+cache/0/90/0/ascent = 0.0
+cache/0/90/0/descent = 0.0
+cache/0/90/0/underline_position = 0.0
+cache/0/90/0/underline_thickness = 0.0
+cache/0/90/0/scale = 1.0
+cache/0/91/0/ascent = 0.0
+cache/0/91/0/descent = 0.0
+cache/0/91/0/underline_position = 0.0
+cache/0/91/0/underline_thickness = 0.0
+cache/0/91/0/scale = 1.0
+cache/0/92/0/ascent = 0.0
+cache/0/92/0/descent = 0.0
+cache/0/92/0/underline_position = 0.0
+cache/0/92/0/underline_thickness = 0.0
+cache/0/92/0/scale = 1.0
+cache/0/93/0/ascent = 0.0
+cache/0/93/0/descent = 0.0
+cache/0/93/0/underline_position = 0.0
+cache/0/93/0/underline_thickness = 0.0
+cache/0/93/0/scale = 1.0
+cache/0/96/0/ascent = 0.0
+cache/0/96/0/descent = 0.0
+cache/0/96/0/underline_position = 0.0
+cache/0/96/0/underline_thickness = 0.0
+cache/0/96/0/scale = 1.0
+cache/0/97/0/ascent = 0.0
+cache/0/97/0/descent = 0.0
+cache/0/97/0/underline_position = 0.0
+cache/0/97/0/underline_thickness = 0.0
+cache/0/97/0/scale = 1.0
+cache/0/99/0/ascent = 0.0
+cache/0/99/0/descent = 0.0
+cache/0/99/0/underline_position = 0.0
+cache/0/99/0/underline_thickness = 0.0
+cache/0/99/0/scale = 1.0
+cache/0/101/0/ascent = 0.0
+cache/0/101/0/descent = 0.0
+cache/0/101/0/underline_position = 0.0
+cache/0/101/0/underline_thickness = 0.0
+cache/0/101/0/scale = 1.0
+cache/0/105/0/ascent = 0.0
+cache/0/105/0/descent = 0.0
+cache/0/105/0/underline_position = 0.0
+cache/0/105/0/underline_thickness = 0.0
+cache/0/105/0/scale = 1.0
+cache/0/108/0/ascent = 0.0
+cache/0/108/0/descent = 0.0
+cache/0/108/0/underline_position = 0.0
+cache/0/108/0/underline_thickness = 0.0
+cache/0/108/0/scale = 1.0
+cache/0/110/0/ascent = 0.0
+cache/0/110/0/descent = 0.0
+cache/0/110/0/underline_position = 0.0
+cache/0/110/0/underline_thickness = 0.0
+cache/0/110/0/scale = 1.0
+cache/0/112/0/ascent = 0.0
+cache/0/112/0/descent = 0.0
+cache/0/112/0/underline_position = 0.0
+cache/0/112/0/underline_thickness = 0.0
+cache/0/112/0/scale = 1.0
+cache/0/113/0/ascent = 0.0
+cache/0/113/0/descent = 0.0
+cache/0/113/0/underline_position = 0.0
+cache/0/113/0/underline_thickness = 0.0
+cache/0/113/0/scale = 1.0
+cache/0/114/0/ascent = 0.0
+cache/0/114/0/descent = 0.0
+cache/0/114/0/underline_position = 0.0
+cache/0/114/0/underline_thickness = 0.0
+cache/0/114/0/scale = 1.0
+cache/0/115/0/ascent = 0.0
+cache/0/115/0/descent = 0.0
+cache/0/115/0/underline_position = 0.0
+cache/0/115/0/underline_thickness = 0.0
+cache/0/115/0/scale = 1.0
+cache/0/116/0/ascent = 0.0
+cache/0/116/0/descent = 0.0
+cache/0/116/0/underline_position = 0.0
+cache/0/116/0/underline_thickness = 0.0
+cache/0/116/0/scale = 1.0
+cache/0/117/0/ascent = 0.0
+cache/0/117/0/descent = 0.0
+cache/0/117/0/underline_position = 0.0
+cache/0/117/0/underline_thickness = 0.0
+cache/0/117/0/scale = 1.0
+cache/0/118/0/ascent = 0.0
+cache/0/118/0/descent = 0.0
+cache/0/118/0/underline_position = 0.0
+cache/0/118/0/underline_thickness = 0.0
+cache/0/118/0/scale = 1.0
+cache/0/119/0/ascent = 0.0
+cache/0/119/0/descent = 0.0
+cache/0/119/0/underline_position = 0.0
+cache/0/119/0/underline_thickness = 0.0
+cache/0/119/0/scale = 1.0
+cache/0/120/0/ascent = 0.0
+cache/0/120/0/descent = 0.0
+cache/0/120/0/underline_position = 0.0
+cache/0/120/0/underline_thickness = 0.0
+cache/0/120/0/scale = 1.0
+cache/0/121/0/ascent = 0.0
+cache/0/121/0/descent = 0.0
+cache/0/121/0/underline_position = 0.0
+cache/0/121/0/underline_thickness = 0.0
+cache/0/121/0/scale = 1.0
+cache/0/122/0/ascent = 0.0
+cache/0/122/0/descent = 0.0
+cache/0/122/0/underline_position = 0.0
+cache/0/122/0/underline_thickness = 0.0
+cache/0/122/0/scale = 1.0
+
+[node name="Main" type="Node2D" unique_id=204862935]
+script = ExtResource("1_sihr0")
+
+[node name="PauseMenu" type="CanvasLayer" parent="." unique_id=1290597822]
+process_mode = 3
+
+[node name="Panel" type="Panel" parent="PauseMenu" unique_id=240473985]
+offset_left = 475.0
+offset_top = 205.0
+offset_right = 675.0
+offset_bottom = 405.0
+
+[node name="Label" type="Label" parent="PauseMenu/Panel" unique_id=743302201]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 33.0
+offset_right = 118.0
+offset_bottom = 56.0
+text = "Pause"
+
+[node name="Button_Continuar" type="Button" parent="PauseMenu/Panel" unique_id=671476483]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 78.0
+offset_right = 149.0
+offset_bottom = 109.0
+text = "Continuar"
+
+[node name="Button_Menu" type="Button" parent="PauseMenu/Panel" unique_id=473896247]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 115.0
+offset_right = 126.0
+offset_bottom = 146.0
+text = "Menu
+"
+
+[node name="Mapa" parent="." unique_id=1947304655 instance=ExtResource("2_xfq55")]
+visible = false
+
+[node name="Run" type="Node2D" parent="." unique_id=1914529099]
+visible = false
+script = ExtResource("3_koup1")
+
+[node name="Score_Manager" type="Node" parent="Run" unique_id=1660566773]
+script = ExtResource("5_nll35")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Run/Score_Manager" unique_id=1267698669]
+layer = 10
+
+[node name="Score_Label" type="Label" parent="Run/Score_Manager/CanvasLayer" unique_id=627356907]
+offset_left = 963.0
+offset_top = 18.0
+offset_right = 1003.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 20
+
+[node name="Run_Manager" type="Node" parent="Run" unique_id=291661047]
+script = ExtResource("6_k1jei")
+
+[node name="Player" parent="Run" unique_id=869641284 instance=ExtResource("4_26jie")]
+position = Vector2(100, 520)
+
+[node name="Camera2D" type="Camera2D" parent="Run" unique_id=322733958]
+position = Vector2(575, 323)
+
+[node name="Limites" type="Node2D" parent="Run" unique_id=582708467]
+
+[node name="Chão" type="StaticBody2D" parent="Run/Limites" unique_id=2088761209]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Run/Limites/Chão" unique_id=1318975360]
+position = Vector2(93, 631)
+shape = SubResource("WorldBoundaryShape2D_oxeok")
+
+[node name="Limite Esquerda" type="StaticBody2D" parent="Run/Limites" unique_id=1217387369]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Run/Limites/Limite Esquerda" unique_id=112983355]
+position = Vector2(6, 396)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_hvey0")
+
+[node name="Cenario" type="ParallaxBackground" parent="Run" unique_id=21693949]
+visible = false
+script = ExtResource("7_x0njg")
+
+[node name="Fundo 0" type="ParallaxLayer" parent="Run/Cenario" unique_id=1035465720]
+motion_mirroring = Vector2(1146, 0)
+
+[node name="Céu" type="Sprite2D" parent="Run/Cenario/Fundo 0" unique_id=2146565596]
+position = Vector2(573.00006, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("8_ay0dw")
+
+[node name="Fundo 1" type="ParallaxLayer" parent="Run/Cenario" unique_id=661444881]
+motion_mirroring = Vector2(1148, 0)
+
+[node name="Chão" type="Sprite2D" parent="Run/Cenario/Fundo 1" unique_id=1946973953]
+position = Vector2(574, 592)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("9_c7677")
+
+[node name="Loja" type="Control" parent="." unique_id=927319208]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.1111112, 1.004065)
+script = ExtResource("10_xfq55")
+
+[node name="ColorRect" type="ColorRect" parent="Loja" unique_id=517673167]
+z_index = -5
+layout_mode = 0
+offset_right = 1039.4999
+offset_bottom = 651.35223
+mouse_filter = 2
+color = Color(0.038559277, 0.38096172, 0.4609713, 1)
+
+[node name="Tr_Background" type="TextureRect" parent="Loja" unique_id=180371366]
+visible = false
+custom_minimum_size = Vector2(5.095, 2.105)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.5475
+offset_top = -1.0525
+offset_right = 1038.5999
+offset_bottom = 651.35223
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Lb_Titulo" type="Label" parent="Loja" unique_id=1668425953]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 1.8
+offset_top = -0.9959514
+offset_right = 1039.5
+offset_bottom = 162.00404
+grow_horizontal = 2
+theme_override_fonts/font = SubResource("FontFile_dapfe")
+theme_override_font_sizes/font_size = 122
+text = "Loja"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="Loja" unique_id=1311217259]
+layout_mode = 0
+offset_left = 330.3
+offset_top = 267.91092
+offset_right = 730.30005
+offset_bottom = 417.91092
+
+[node name="Bt_Item1" type="Button" parent="Loja/Panel" unique_id=1310169631]
+layout_mode = 0
+offset_left = 38.699997
+offset_top = 48.80162
+offset_right = 98.7
+offset_bottom = 108.80162
+disabled = true
+text = "Item 1"
+
+[node name="Bt_Item2" type="Button" parent="Loja/Panel" unique_id=1886312718]
+layout_mode = 0
+offset_left = 166.5
+offset_top = 49.797543
+offset_right = 226.5
+offset_bottom = 109.79755
+disabled = true
+text = "Item 2"
+
+[node name="Bt_Item3" type="Button" parent="Loja/Panel" unique_id=1226409690]
+layout_mode = 0
+offset_left = 290.69995
+offset_top = 49.79754
+offset_right = 350.69995
+offset_bottom = 109.79753
+disabled = true
+text = "Item 3"
+
+[node name="Bt_Sair" type="Button" parent="Loja" unique_id=497012888]
+layout_mode = 0
+offset_left = 829.7999
+offset_top = 556.7369
+offset_right = 1018.79987
+offset_bottom = 634.4211
+text = "Sair"
+
+[node name="Cura" type="Control" parent="." unique_id=12459680]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("11_koup1")
+
+[node name="ColorRect" type="ColorRect" parent="Cura" unique_id=1009353093]
+z_index = -5
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 643.0
+color = Color(0.72657555, 0.43895444, 0.41488007, 1)
+
+[node name="Tr_Background" type="TextureRect" parent="Cura" unique_id=1762823370]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Lb_Info" type="Label" parent="Cura" unique_id=1268568290]
+layout_mode = 0
+offset_left = 293.0
+offset_top = 176.0
+offset_right = 859.0
+offset_bottom = 293.0
+theme_override_font_sizes/font_size = 51
+text = "Info"
+horizontal_alignment = 1
+
+[node name="Lb_Titulo" type="Label" parent="Cura" unique_id=1333492222]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 1152.0
+offset_bottom = 140.0
+theme_override_font_sizes/font_size = 100
+text = "Cura"
+horizontal_alignment = 1
+
+[node name="Bt_Curar" type="Button" parent="Cura" unique_id=1714702090]
+layout_mode = 0
+offset_left = 474.0
+offset_top = 336.0
+offset_right = 691.0
+offset_bottom = 412.0
+theme_override_font_sizes/font_size = 33
+text = "Curar"
+
+[node name="Bt_Sair" type="Button" parent="Cura" unique_id=852913206]
+layout_mode = 0
+offset_left = 921.0
+offset_top = 545.0
+offset_right = 1131.0
+offset_bottom = 626.0
+theme_override_font_sizes/font_size = 16
+text = "Sair"
+
+[node name="Boss" type="Control" parent="." unique_id=323958049]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Boss" unique_id=144779360]
+layout_mode = 0
+offset_right = 1157.0
+offset_bottom = 652.0
+color = Color(0.6724258, 0.3562069, 0.011494201, 1)
+
+[node name="Label" type="Label" parent="Boss" unique_id=1029066251]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 41.0
+offset_right = 1064.0
+offset_bottom = 318.0
+theme_override_font_sizes/font_size = 100
+text = "Em breve...
+Obrigado por jogar "
+horizontal_alignment = 1
+
+[node name="Bt_Menu" type="Button" parent="Boss" unique_id=1099546664]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 484.0
+offset_right = 790.0
+offset_bottom = 594.0
+theme_override_font_sizes/font_size = 40
+text = "Menu inicial"
+
+[node name="Bt_Replay" type="Button" parent="Boss" unique_id=625847023]
+layout_mode = 0
+offset_left = 383.0
+offset_top = 360.0
+offset_right = 789.0
+offset_bottom = 470.0
+theme_override_font_sizes/font_size = 40
+text = "Jogar Novamente"
+
+[connection signal="pressed" from="PauseMenu/Panel/Button_Continuar" to="." method="_on_button_continuar_pressed"]
+[connection signal="pressed" from="PauseMenu/Panel/Button_Menu" to="." method="_on_button_menu_pressed"]
+[connection signal="room_selected" from="Mapa" to="." method="_on_mapa_room_selected"]
+[connection signal="run_finished" from="Run/Run_Manager" to="." method="_run_finished"]
+[connection signal="pressed" from="Loja/Bt_Sair" to="." method="_on_bt_sair_pressed"]
+[connection signal="pressed" from="Cura/Bt_Sair" to="." method="_on_bt_sair_pressed"]
+[connection signal="pressed" from="Boss/Bt_Menu" to="." method="_on_bt_menu_pressed"]
+[connection signal="pressed" from="Boss/Bt_Replay" to="." method="_on_bt_replay_pressed"]

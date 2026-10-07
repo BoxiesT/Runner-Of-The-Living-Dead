@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b68x00bi2dw1w"]
+
+[ext_resource type="Script" uid="uid://od4ivan7ek2w" path="res://Codigos/gerador_de_mapa.gd" id="1_ax5xq"]
+[ext_resource type="Script" uid="uid://dcqvyhfch0e4t" path="res://Codigos/mapa.gd" id="1_e8ttm"]
+
+[node name="Mapa" type="Node2D" unique_id=1947304655]
+script = ExtResource("1_e8ttm")
+
+[node name="Visuals" type="Node2D" parent="." unique_id=617052947]
+z_index = 1
+
+[node name="Lines" type="Node2D" parent="Visuals" unique_id=89649963]
+z_index = 1
+
+[node name="Rooms" type="Node2D" parent="Visuals" unique_id=1409112541]
+z_index = 1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1767110390]
+offset = Vector2(576, 324)
+
+[node name="Gerador de mapa" type="Node" parent="." unique_id=1974052667]
+script = ExtResource("1_ax5xq")

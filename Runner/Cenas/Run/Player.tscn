@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://chof85pm00sfe"]
+
+[ext_resource type="Texture2D" uid="uid://bkjcfld1500jn" path="res://Artes/Runner Tamplate/Zumbi.png" id="1_3ujay"]
+[ext_resource type="Script" uid="uid://bsgaqb30ep0da" path="res://Codigos/player.gd" id="1_bl1hy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jqj7f"]
+size = Vector2(80, 143)
+
+[node name="Player" type="CharacterBody2D" unique_id=869641284]
+script = ExtResource("1_bl1hy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1144468922]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_3ujay")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1067697241]
+position = Vector2(0, 13.5)
+shape = SubResource("RectangleShape2D_jqj7f")
