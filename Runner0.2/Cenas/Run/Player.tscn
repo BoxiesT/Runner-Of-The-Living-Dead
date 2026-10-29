@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://chof85pm00sfe"]
+
+[ext_resource type="Script" uid="uid://bsgaqb30ep0da" path="res://Codigos/player.gd" id="1_bl1hy"]
+[ext_resource type="Texture2D" uid="uid://dfpputk7tewa4" path="res://Artes/Oficial Runner/Animação Bizum/1.png" id="2_i1bqd"]
+[ext_resource type="Texture2D" uid="uid://bnhxq3by073y3" path="res://Artes/Oficial Runner/Animação Bizum/2.png" id="3_p6wa2"]
+[ext_resource type="Texture2D" uid="uid://boq0k6xuqu4mu" path="res://Artes/Oficial Runner/Animação Bizum/3.png" id="4_1wkl7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o37kf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_i1bqd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_p6wa2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1wkl7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_p6wa2")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jqj7f"]
+size = Vector2(80, 143)
+
+[node name="Player" type="CharacterBody2D" unique_id=869641284]
+script = ExtResource("1_bl1hy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=591397392]
+scale = Vector2(0.13, 0.15)
+sprite_frames = SubResource("SpriteFrames_o37kf")
+autoplay = "default"
+frame_progress = 0.114693835
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1067697241]
+position = Vector2(0, 13.5)
+shape = SubResource("RectangleShape2D_jqj7f")

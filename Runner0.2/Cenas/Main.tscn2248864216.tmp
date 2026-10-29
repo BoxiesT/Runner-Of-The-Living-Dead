@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://c2mw304mf5lo1"]
+
+[ext_resource type="PackedScene" uid="uid://b68x00bi2dw1w" path="res://Cenas/Mapa/_Mapa.tscn" id="2_xfq55"]
+[ext_resource type="PackedScene" uid="uid://chof85pm00sfe" path="res://Cenas/Run/Player.tscn" id="4_26jie"]
+[ext_resource type="Texture2D" uid="uid://c0vhd3ynlafa5" path="res://Artes/Runner Tamplate/SkyPrancheta.png" id="8_ay0dw"]
+[ext_resource type="Texture2D" uid="uid://w23q7erelx28" path="res://Artes/Runner Tamplate/Ground.png" id="9_c7677"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_oxeok"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_hvey0"]
+distance = -5.0000153
+
+[node name="Main" type="Node2D" unique_id=204862935]
+
+[node name="Mapa" parent="." unique_id=1947304655 instance=ExtResource("2_xfq55")]
+
+[node name="Run" type="Node2D" parent="." unique_id=1914529099]
+
+[node name="Player" parent="Run" unique_id=869641284 instance=ExtResource("4_26jie")]
+position = Vector2(108, 519)
+
+[node name="Camera2D" type="Camera2D" parent="Run" unique_id=322733958]
+position = Vector2(575, 323)
+
+[node name="Limites" type="Node" parent="Run" unique_id=972085745]
+
+[node name="Chão" type="StaticBody2D" parent="Run/Limites" unique_id=2088761209]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Run/Limites/Chão" unique_id=1318975360]
+position = Vector2(93, 631)
+shape = SubResource("WorldBoundaryShape2D_oxeok")
+
+[node name="Limite Esquerda" type="StaticBody2D" parent="Run/Limites" unique_id=1217387369]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Run/Limites/Limite Esquerda" unique_id=112983355]
+position = Vector2(6, 396)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_hvey0")
+
+[node name="PauseMenu" type="CanvasLayer" parent="Run" unique_id=1290597822]
+process_mode = 3
+
+[node name="Panel" type="Panel" parent="Run/PauseMenu" unique_id=240473985]
+offset_left = 466.0
+offset_top = 269.0
+offset_right = 666.0
+offset_bottom = 469.0
+
+[node name="Label" type="Label" parent="Run/PauseMenu/Panel" unique_id=743302201]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 33.0
+offset_right = 118.0
+offset_bottom = 56.0
+text = "Pause"
+
+[node name="Button_Continuar" type="Button" parent="Run/PauseMenu/Panel" unique_id=671476483]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 78.0
+offset_right = 149.0
+offset_bottom = 109.0
+text = "Continuar"
+
+[node name="Button_Menu" type="Button" parent="Run/PauseMenu/Panel" unique_id=473896247]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 115.0
+offset_right = 126.0
+offset_bottom = 146.0
+text = "Menu
+"
+
+[node name="Score_Manager" type="Node" parent="Run" unique_id=1660566773]
+
+[node name="Score_Label" type="Label" parent="Run/Score_Manager" unique_id=627356907]
+offset_left = 963.0
+offset_top = 18.0
+offset_right = 1003.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 20
+
+[node name="Run_Manager" type="Node" parent="Run" unique_id=291661047]
+
+[node name="Cenario" type="ParallaxBackground" parent="Run" unique_id=21693949]
+
+[node name="Fundo 0" type="ParallaxLayer" parent="Run/Cenario" unique_id=1035465720]
+motion_mirroring = Vector2(1146, 0)
+
+[node name="Céu" type="Sprite2D" parent="Run/Cenario/Fundo 0" unique_id=2146565596]
+position = Vector2(573.00006, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("8_ay0dw")
+
+[node name="Fundo 1" type="ParallaxLayer" parent="Run/Cenario" unique_id=661444881]
+motion_mirroring = Vector2(1148, 0)
+
+[node name="Chão" type="Sprite2D" parent="Run/Cenario/Fundo 1" unique_id=1946973953]
+position = Vector2(574, 592)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("9_c7677")
+
+[connection signal="room_selected" from="Mapa" to="." method="_on_mapa_room_selected"]
+[connection signal="pressed" from="Run/PauseMenu/Panel/Button_Continuar" to="." method="_on_button_continuar_pressed"]
+[connection signal="pressed" from="Run/PauseMenu/Panel/Button_Menu" to="." method="_on_button_menu_pressed"]

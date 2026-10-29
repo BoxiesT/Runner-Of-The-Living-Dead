@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ds4pbspwqehxu"]
+
+[ext_resource type="Script" uid="uid://qveh8dlmii6y" path="res://Codigos/carro.gd" id="1_i41ec"]
+[ext_resource type="Texture2D" uid="uid://b33a1rpino04j" path="res://Artes/Oficial Runner/Oficial Obstaculos/Carro.png" id="2_votlh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
+size = Vector2(227.5, 134.25)
+
+[node name="Carro" type="Area2D" unique_id=89306455]
+script = ExtResource("1_i41ec")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=12638201]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_votlh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1940985153]
+shape = SubResource("RectangleShape2D_xrivr")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

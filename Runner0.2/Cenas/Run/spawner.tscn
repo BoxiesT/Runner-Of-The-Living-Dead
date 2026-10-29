@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://6ukc3gcwny2m"]
+
+[ext_resource type="Script" uid="uid://xmokoxl7ngk3" path="res://Codigos/spawner.gd" id="1_gbc1y"]
+[ext_resource type="PackedScene" uid="uid://dddpe0rl6rdn2" path="res://Cenas/Run/Obstaculos/Lixeira.tscn" id="2_mcln3"]
+[ext_resource type="PackedScene" uid="uid://ds4pbspwqehxu" path="res://Cenas/Run/Obstaculos/carro.tscn" id="3_kc4fv"]
+
+[node name="Spawner" type="Node2D" unique_id=1497226891]
+script = ExtResource("1_gbc1y")
+cena_obstaculo = ExtResource("2_mcln3")
+lista_obstaculos = Array[PackedScene]([ExtResource("2_mcln3"), ExtResource("3_kc4fv")])
+
+[node name="Timer" type="Timer" parent="." unique_id=1476739284]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

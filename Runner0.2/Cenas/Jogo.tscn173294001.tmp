@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c2mw304mf5lo1"]
+
+[ext_resource type="PackedScene" uid="uid://b68x00bi2dw1w" path="res://Cenas/Mapa/Mapa.tscn" id="1_cu2wc"]
+
+[node name="Jogo" type="Node2D" unique_id=204862935]
+
+[node name="Mapa" parent="." unique_id=1947304655 instance=ExtResource("1_cu2wc")]
+position = Vector2(0, 1)

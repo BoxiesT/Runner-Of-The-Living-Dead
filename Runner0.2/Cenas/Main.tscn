@@ -1,0 +1,444 @@
+[gd_scene format=3 uid="uid://c2mw304mf5lo1"]
+
+[ext_resource type="Script" uid="uid://clrvhgynklhd0" path="res://Codigos/main.gd" id="1_sihr0"]
+[ext_resource type="FontFile" uid="uid://mehmgin41txe" path="res://Fontes/Deanna.ttf" id="2_26jie"]
+[ext_resource type="PackedScene" uid="uid://b68x00bi2dw1w" path="res://Cenas/Mapa/_Mapa.tscn" id="2_xfq55"]
+[ext_resource type="Script" uid="uid://dvkk2fccqv20s" path="res://Codigos/run.gd" id="3_koup1"]
+[ext_resource type="Texture2D" uid="uid://6580fq2x4lyh" path="res://Artes/Oficial Map Icons/CuraIconPrancheta_1.png" id="3_muqna"]
+[ext_resource type="Script" uid="uid://dnjtjorrfxg7p" path="res://Codigos/vidas.gd" id="3_r6pc2"]
+[ext_resource type="PackedScene" uid="uid://chof85pm00sfe" path="res://Cenas/Run/Player.tscn" id="4_26jie"]
+[ext_resource type="Script" uid="uid://qdjap6lpi5pm" path="res://Codigos/score_manager.gd" id="5_nll35"]
+[ext_resource type="Script" uid="uid://sgmgyrcdt2gk" path="res://Codigos/run_manager.gd" id="6_k1jei"]
+[ext_resource type="Script" uid="uid://deklenpm8g4ri" path="res://Codigos/Cenario.gd" id="7_x0njg"]
+[ext_resource type="Texture2D" uid="uid://c0vhd3ynlafa5" path="res://Artes/Tamplate Runner/SkyPrancheta.png" id="8_ay0dw"]
+[ext_resource type="PackedScene" uid="uid://ds4pbspwqehxu" path="res://Cenas/Run/Obstaculos/carro.tscn" id="9_ruu73"]
+[ext_resource type="Texture2D" uid="uid://nr1rleuy0h5k" path="res://Artes/Oficial Runner/Ground1Prancheta 1.png" id="10_26jie"]
+[ext_resource type="PackedScene" uid="uid://dddpe0rl6rdn2" path="res://Cenas/Run/Obstaculos/Lixeira.tscn" id="10_muqna"]
+[ext_resource type="Script" uid="uid://df3o5bqe3yxmn" path="res://Codigos/loja.gd" id="10_xfq55"]
+[ext_resource type="Script" uid="uid://elq3w58j6pkg" path="res://Codigos/cura.gd" id="11_koup1"]
+[ext_resource type="Texture2D" uid="uid://dwsg8um151ppu" path="res://Artes/Oficial Runner/BackgroundPrancheta 1.png" id="11_nll35"]
+[ext_resource type="Texture2D" uid="uid://bpyy234cg776u" path="res://Artes/Oficial Runner/casas1Prancheta_1.png" id="12_ay0dw"]
+[ext_resource type="Texture2D" uid="uid://cnlprr0fh1kl3" path="res://Artes/Oficial Runner/casas2Prancheta_1.png" id="13_c7677"]
+[ext_resource type="Texture2D" uid="uid://brhebxdydued3" path="res://Artes/Oficial Runner/casas3Prancheta_1.png" id="14_dapfe"]
+[ext_resource type="Texture2D" uid="uid://vnaf2yc476lm" path="res://Artes/Oficial Runner/casas4Prancheta_1.png" id="15_c7677"]
+[ext_resource type="PackedScene" uid="uid://6ukc3gcwny2m" path="res://Cenas/Run/spawner.tscn" id="16_a71vs"]
+[ext_resource type="Texture2D" uid="uid://5xjsckepwnaw" path="res://Artes/Oficial Loja/StorePrancheta_1.png" id="17_dapfe"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_oxeok"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_hvey0"]
+distance = -5.0000153
+
+[sub_resource type="FontFile" id="FontFile_a71vs"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/130/0/ascent = 0.0
+cache/0/130/0/descent = 0.0
+cache/0/130/0/underline_position = 0.0
+cache/0/130/0/underline_thickness = 0.0
+cache/0/130/0/scale = 1.0
+
+[node name="Main" type="Node2D" unique_id=204862935]
+script = ExtResource("1_sihr0")
+
+[node name="PauseMenu" type="CanvasLayer" parent="." unique_id=1290597822]
+process_mode = 3
+visible = false
+
+[node name="Panel" type="Panel" parent="PauseMenu" unique_id=240473985]
+offset_left = 475.0
+offset_top = 205.0
+offset_right = 675.0
+offset_bottom = 405.0
+
+[node name="Label" type="Label" parent="PauseMenu/Panel" unique_id=743302201]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 33.0
+offset_right = 118.0
+offset_bottom = 56.0
+text = "Pause"
+
+[node name="Button_Continuar" type="Button" parent="PauseMenu/Panel" unique_id=671476483]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 78.0
+offset_right = 149.0
+offset_bottom = 109.0
+text = "Continuar"
+
+[node name="Button_Menu" type="Button" parent="PauseMenu/Panel" unique_id=473896247]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 115.0
+offset_right = 126.0
+offset_bottom = 146.0
+text = "Menu
+"
+
+[node name="Mapa" parent="." unique_id=1947304655 instance=ExtResource("2_xfq55")]
+
+[node name="Run" type="Node2D" parent="." unique_id=1914529099]
+script = ExtResource("3_koup1")
+
+[node name="Score_Manager" type="Node" parent="Run" unique_id=1660566773]
+script = ExtResource("5_nll35")
+
+[node name="Run_Manager" type="Node" parent="Run" unique_id=291661047]
+script = ExtResource("6_k1jei")
+
+[node name="Player" parent="Run" unique_id=869641284 instance=ExtResource("4_26jie")]
+position = Vector2(123, 512)
+
+[node name="Camera2D" type="Camera2D" parent="Run" unique_id=322733958]
+position = Vector2(575, 323)
+
+[node name="Spawner" parent="Run" unique_id=1497226891 instance=ExtResource("16_a71vs")]
+z_index = 5
+position = Vector2(1381, 530)
+lista_obstaculos = Array[PackedScene]([ExtResource("9_ruu73"), ExtResource("10_muqna")])
+
+[node name="Limites" type="Node2D" parent="Run" unique_id=582708467]
+
+[node name="Chão" type="StaticBody2D" parent="Run/Limites" unique_id=2088761209]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Run/Limites/Chão" unique_id=1318975360]
+position = Vector2(110, 600)
+shape = SubResource("WorldBoundaryShape2D_oxeok")
+
+[node name="Limite Esquerda" type="StaticBody2D" parent="Run/Limites" unique_id=1217387369]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Run/Limites/Limite Esquerda" unique_id=112983355]
+position = Vector2(6, 396)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_hvey0")
+
+[node name="Limite Direita" type="StaticBody2D" parent="Run/Limites" unique_id=1050716186]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Run/Limites/Limite Direita" unique_id=1158095294]
+position = Vector2(1147, 411)
+rotation = 4.712389
+shape = SubResource("WorldBoundaryShape2D_hvey0")
+
+[node name="Cenario" type="ParallaxBackground" parent="Run" unique_id=21693949]
+script = ExtResource("7_x0njg")
+
+[node name="Fundo 0" type="ParallaxLayer" parent="Run/Cenario" unique_id=1035465720]
+motion_mirroring = Vector2(1146, 0)
+
+[node name="Céu" type="Sprite2D" parent="Run/Cenario/Fundo 0" unique_id=2146565596]
+position = Vector2(571, -41)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("8_ay0dw")
+
+[node name="Fundo 1" type="ParallaxLayer" parent="Run/Cenario" unique_id=1466480638]
+motion_mirroring = Vector2(1150, 0)
+
+[node name="Cristo" type="Sprite2D" parent="Run/Cenario/Fundo 1" unique_id=25840231]
+position = Vector2(572, 77)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_nll35")
+
+[node name="Fundo2" type="Parallax2D" parent="Run/Cenario" unique_id=2077852413]
+scroll_scale = Vector2(-1, -1)
+repeat_size = Vector2(660, 0)
+autoscroll = Vector2(-300, 0)
+repeat_times = 3
+
+[node name="Chão" type="Sprite2D" parent="Run/Cenario/Fundo2" unique_id=1946973953]
+position = Vector2(577, 319)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("10_26jie")
+
+[node name="Fundo 3" type="ParallaxLayer" parent="Run/Cenario" unique_id=1834281245]
+position = Vector2(-21, 0)
+motion_mirroring = Vector2(6500, 0)
+
+[node name="Casas1" type="Sprite2D" parent="Run/Cenario/Fundo 3" unique_id=1982815384]
+position = Vector2(779, -171)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("12_ay0dw")
+
+[node name="Fundo 4" type="ParallaxLayer" parent="Run/Cenario" unique_id=1390349653]
+position = Vector2(-21, 0)
+motion_mirroring = Vector2(6500, 0)
+
+[node name="Casas2" type="Sprite2D" parent="Run/Cenario/Fundo 4" unique_id=1666266654]
+position = Vector2(2396, -183)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("13_c7677")
+
+[node name="Fundo 5" type="ParallaxLayer" parent="Run/Cenario" unique_id=896989674]
+position = Vector2(28, -14)
+motion_mirroring = Vector2(6500, 0)
+
+[node name="Casas3" type="Sprite2D" parent="Run/Cenario/Fundo 5" unique_id=426628210]
+position = Vector2(3998, -130)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("14_dapfe")
+
+[node name="Fundo 6" type="ParallaxLayer" parent="Run/Cenario" unique_id=413694644]
+motion_mirroring = Vector2(6500, 0)
+
+[node name="Casas4" type="Sprite2D" parent="Run/Cenario/Fundo 6" unique_id=1146856521]
+position = Vector2(5589, -175)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("15_c7677")
+
+[node name="Loja" type="Control" parent="." unique_id=927319208]
+visible = false
+z_index = -90
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.1111112, 1.004065)
+script = ExtResource("10_xfq55")
+
+[node name="Tr_Background" type="TextureRect" parent="Loja" unique_id=180371366]
+custom_minimum_size = Vector2(5.095, 2.105)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.5475
+offset_top = -1.0525
+offset_right = 1038.5999
+offset_bottom = 651.35223
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("17_dapfe")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Lb_Titulo" type="Label" parent="Loja" unique_id=1668425953]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 224.99998
+offset_top = 135.44942
+offset_right = 1262.7
+offset_bottom = 309.44943
+grow_horizontal = 2
+scale = Vector2(0.26934004, 0.3426082)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontFile_a71vs")
+theme_override_font_sizes/font_size = 130
+text = "Loja"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bt_Item1" type="Button" parent="Loja" unique_id=1310169631]
+layout_mode = 0
+offset_left = 192.59998
+offset_top = 408.3401
+offset_right = 252.59996
+offset_bottom = 468.3401
+text = "Item 1"
+
+[node name="Bt_Item2" type="Button" parent="Loja" unique_id=1886312718]
+layout_mode = 0
+offset_left = 476.99994
+offset_top = 405.35223
+offset_right = 536.99994
+offset_bottom = 465.35223
+text = "Item 2"
+
+[node name="Bt_Item3" type="Button" parent="Loja" unique_id=1226409690]
+layout_mode = 0
+offset_left = 759.6
+offset_top = 403.36032
+offset_right = 819.6
+offset_bottom = 463.36032
+text = "Item 3"
+
+[node name="Bt_Sair" type="Button" parent="Loja" unique_id=497012888]
+layout_mode = 0
+offset_left = 829.7999
+offset_top = 556.7369
+offset_right = 1018.79987
+offset_bottom = 634.4211
+text = "Sair"
+
+[node name="Cura" type="Control" parent="." unique_id=12459680]
+visible = false
+z_index = -90
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("11_koup1")
+
+[node name="ColorRect" type="ColorRect" parent="Cura" unique_id=1009353093]
+z_index = -5
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 643.0
+color = Color(0.72657555, 0.43895444, 0.41488007, 1)
+
+[node name="Tr_Background" type="TextureRect" parent="Cura" unique_id=1762823370]
+visible = false
+z_index = -100
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Lb_Info" type="Label" parent="Cura" unique_id=1268568290]
+layout_mode = 0
+offset_left = 293.0
+offset_top = 176.0
+offset_right = 859.0
+offset_bottom = 293.0
+theme_override_font_sizes/font_size = 51
+text = "Info"
+horizontal_alignment = 1
+
+[node name="Lb_Titulo" type="Label" parent="Cura" unique_id=1333492222]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 1152.0
+offset_bottom = 140.0
+theme_override_font_sizes/font_size = 100
+text = "Cura"
+horizontal_alignment = 1
+
+[node name="Bt_Curar" type="Button" parent="Cura" unique_id=1714702090]
+layout_mode = 0
+offset_left = 474.0
+offset_top = 336.0
+offset_right = 691.0
+offset_bottom = 412.0
+theme_override_font_sizes/font_size = 33
+text = "Curar"
+
+[node name="Bt_Sair" type="Button" parent="Cura" unique_id=852913206]
+layout_mode = 0
+offset_left = 921.0
+offset_top = 545.0
+offset_right = 1131.0
+offset_bottom = 626.0
+theme_override_font_sizes/font_size = 16
+text = "Sair"
+
+[node name="Boss" type="Control" parent="." unique_id=323958049]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Boss" unique_id=144779360]
+layout_mode = 0
+offset_right = 1157.0
+offset_bottom = 652.0
+color = Color(0.6724258, 0.3562069, 0.011494201, 1)
+
+[node name="Label" type="Label" parent="Boss" unique_id=1029066251]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 41.0
+offset_right = 1064.0
+offset_bottom = 318.0
+theme_override_font_sizes/font_size = 100
+text = "Em breve...
+Obrigado por jogar "
+horizontal_alignment = 1
+
+[node name="Bt_Menu" type="Button" parent="Boss" unique_id=1099546664]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 484.0
+offset_right = 790.0
+offset_bottom = 594.0
+theme_override_font_sizes/font_size = 40
+text = "Menu inicial"
+
+[node name="Bt_Replay" type="Button" parent="Boss" unique_id=625847023]
+layout_mode = 0
+offset_left = 383.0
+offset_top = 360.0
+offset_right = 789.0
+offset_bottom = 470.0
+theme_override_font_sizes/font_size = 40
+text = "Jogar Novamente"
+
+[node name="Hud" type="CanvasLayer" parent="." unique_id=1267698669]
+layer = 100
+
+[node name="ColorRect" type="ColorRect" parent="Hud" unique_id=2138476319]
+z_index = -99
+z_as_relative = false
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.842533, 16.240168)
+mouse_filter = 2
+color = Color(0.16813475, 0.26042584, 0.12179115, 0.16862746)
+
+[node name="Score_Label" type="Label" parent="Hud" unique_id=627356907]
+offset_left = 921.0
+offset_top = 15.0
+offset_right = 961.0
+offset_bottom = 61.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_26jie")
+theme_override_font_sizes/font_size = 40
+
+[node name="Vidas" type="Control" parent="Hud" unique_id=315615719]
+z_index = 10
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("3_r6pc2")
+
+[node name="coracoes1" type="TextureRect" parent="Hud/Vidas" unique_id=826660249]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 30.0
+offset_right = 61.0
+offset_bottom = 70.0
+scale = Vector2(1.6271335, 1.6271335)
+texture = ExtResource("3_muqna")
+
+[node name="coracoes2" type="TextureRect" parent="Hud/Vidas" unique_id=1214549997]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 29.0
+offset_right = 125.0
+offset_bottom = 69.0
+scale = Vector2(1.6271335, 1.6271335)
+texture = ExtResource("3_muqna")
+
+[node name="coracoes3" type="TextureRect" parent="Hud/Vidas" unique_id=378517438]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 30.0
+offset_right = 193.0
+offset_bottom = 70.0
+scale = Vector2(1.6271335, 1.6271335)
+texture = ExtResource("3_muqna")
+
+[connection signal="pressed" from="PauseMenu/Panel/Button_Continuar" to="." method="_on_button_continuar_pressed"]
+[connection signal="pressed" from="PauseMenu/Panel/Button_Menu" to="." method="_on_button_menu_pressed"]
+[connection signal="room_selected" from="Mapa" to="." method="_on_mapa_room_selected"]
+[connection signal="run_finished" from="Run/Run_Manager" to="." method="_run_finished"]
+[connection signal="pressed" from="Loja/Bt_Sair" to="." method="_on_bt_sair_pressed"]
+[connection signal="pressed" from="Cura/Bt_Curar" to="Run/Player" method="_on_bt_curar_pressed"]
+[connection signal="pressed" from="Cura/Bt_Sair" to="." method="_on_bt_sair_pressed"]
+[connection signal="pressed" from="Boss/Bt_Menu" to="." method="_on_bt_menu_pressed"]
+[connection signal="pressed" from="Boss/Bt_Replay" to="." method="_on_bt_replay_pressed"]
