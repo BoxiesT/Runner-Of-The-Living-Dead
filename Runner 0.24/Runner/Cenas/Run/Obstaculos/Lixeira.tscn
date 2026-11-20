@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dddpe0rl6rdn2"]
+
+[ext_resource type="Script" uid="uid://c01ljmap6vyd5" path="res://Codigos/Lixeira.gd" id="1_lsw7t"]
+[ext_resource type="Texture2D" uid="uid://dihp4p3etepuv" path="res://Artes/Oficial Runner/Oficial Obstaculos/Lixo.png" id="2_rqasl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
+size = Vector2(54, 86.625)
+
+[node name="Lixeira" type="Area2D" unique_id=1267339051]
+script = ExtResource("1_lsw7t")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2098610431]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_rqasl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=494643010]
+position = Vector2(7, 12.6875)
+shape = SubResource("RectangleShape2D_xrivr")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://eeyl6y0yml0q"]
+
+[ext_resource type="PackedScene" uid="uid://b8etnxyeq2hl0" path="res://Cenas/Loja/Itens/item_base.tscn" id="1_qjvmg"]
+[ext_resource type="Script" uid="uid://dyqb1go3qfd6d" path="res://Codigos/item_score_2x.gd" id="2_penc3"]
+[ext_resource type="Texture2D" uid="uid://bts5cfsfesflq" path="res://Artes/Templates Mapas/Run.png" id="3_ma0ck"]
+
+[node name="ItemScore2x" unique_id=151693909 instance=ExtResource("1_qjvmg")]
+script = ExtResource("2_penc3")
+nome_item = "Score2x"
+preco = 10
+
+[node name="Sprite" parent="." index="0" unique_id=273272456]
+texture = ExtResource("3_ma0ck")

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b8etnxyeq2hl0"]
+
+[ext_resource type="Script" uid="uid://8n4m4t7sq1sp" path="res://Rucursos/item_base.gd" id="1_48ds2"]
+
+[node name="ItemBase" type="Button" unique_id=151693909]
+offset_right = 46.0
+offset_bottom = 46.0
+script = ExtResource("1_48ds2")
+
+[node name="Sprite" type="TextureRect" parent="." unique_id=273272456]
+layout_mode = 0
+offset_right = 46.0
+offset_bottom = 46.0
+mouse_filter = 2

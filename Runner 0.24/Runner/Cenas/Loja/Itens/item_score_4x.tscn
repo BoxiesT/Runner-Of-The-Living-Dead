@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://difb67qkykfm"]
+
+[ext_resource type="PackedScene" uid="uid://b8etnxyeq2hl0" path="res://Cenas/Loja/Itens/item_base.tscn" id="1_a117l"]
+[ext_resource type="Script" uid="uid://ddp0e4ibo1r80" path="res://Codigos/item_score_4x.gd" id="2_0gfpk"]
+[ext_resource type="Texture2D" uid="uid://cdpnhgquktsqy" path="res://Artes/Templates Mapas/Health.png" id="3_opc3s"]
+
+[node name="Item_score_4x" unique_id=151693909 instance=ExtResource("1_a117l")]
+script = ExtResource("2_0gfpk")
+multiplicador = 4.0
+nome_item = "Score4x"
+preco = 20
+
+[node name="Sprite" parent="." index="0" unique_id=273272456]
+texture = ExtResource("3_opc3s")

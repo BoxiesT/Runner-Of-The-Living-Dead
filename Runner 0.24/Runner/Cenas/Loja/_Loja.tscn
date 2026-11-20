@@ -1,0 +1,137 @@
+[gd_scene format=3 uid="uid://bbx06ppodinnr"]
+
+[ext_resource type="Script" uid="uid://df3o5bqe3yxmn" path="res://Codigos/loja.gd" id="1_em4hi"]
+[ext_resource type="Texture2D" uid="uid://5xjsckepwnaw" path="res://Artes/Oficial Loja/StorePrancheta_1.png" id="2_y4hgl"]
+[ext_resource type="PackedScene" uid="uid://eeyl6y0yml0q" path="res://Cenas/Loja/Itens/item_score_2x.tscn" id="3_u4m0k"]
+[ext_resource type="PackedScene" uid="uid://difb67qkykfm" path="res://Cenas/Loja/Itens/item_score_4x.tscn" id="4_cpd3w"]
+
+[sub_resource type="FontFile" id="FontFile_2a4n8"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/130/0/ascent = 0.0
+cache/0/130/0/descent = 0.0
+cache/0/130/0/underline_position = 0.0
+cache/0/130/0/underline_thickness = 0.0
+cache/0/130/0/scale = 1.0
+
+[node name="Loja" type="Control" unique_id=1611340280]
+z_index = -90
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_em4hi")
+itens_disponiveis = Array[PackedScene]([ExtResource("3_u4m0k"), ExtResource("4_cpd3w")])
+
+[node name="Tr_Background" type="TextureRect" parent="." unique_id=1878762843]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1041.1473
+offset_bottom = 652.4047
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_y4hgl")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Lb_Titulo" type="Label" parent="." unique_id=1772181848]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 222.0
+offset_top = 146.0
+offset_right = 1259.7
+offset_bottom = 320.00003
+grow_horizontal = 2
+scale = Vector2(0.26934004, 0.3426082)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontFile_2a4n8")
+theme_override_font_sizes/font_size = 130
+text = "Loja"
+horizontal_alignment = 1
+
+[node name="Posições" type="Control" parent="." unique_id=269705641]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot1" type="Control" parent="Posições" unique_id=691818912]
+anchors_preset = 0
+offset_left = 208.0
+offset_top = 422.0
+offset_right = 248.0
+offset_bottom = 462.0
+
+[node name="Label" type="Label" parent="Posições/Slot1" unique_id=1571558540]
+layout_mode = 0
+offset_left = -5.0
+offset_top = 65.0
+offset_right = 35.0
+offset_bottom = 93.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "100 $"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slot2" type="Control" parent="Posições" unique_id=1255938074]
+anchors_preset = 0
+offset_left = 490.0
+offset_top = 419.0
+offset_right = 530.0
+offset_bottom = 459.0
+
+[node name="Label" type="Label" parent="Posições/Slot2" unique_id=547440890]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 69.0
+offset_right = 49.0
+offset_bottom = 97.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "100 $"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slot3" type="Control" parent="Posições" unique_id=1304974277]
+anchors_preset = 0
+offset_left = 774.0
+offset_top = 418.0
+offset_right = 814.0
+offset_bottom = 458.0
+
+[node name="Label" type="Label" parent="Posições/Slot3" unique_id=1807063615]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 70.0
+offset_right = 47.0
+offset_bottom = 98.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "100 $"
+horizontal_alignment = 1
+vertical_alignment = 1
